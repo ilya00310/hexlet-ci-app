@@ -5,5 +5,8 @@ jobs:
   runs-on: ubuntu-latest
   steps:
     - uses: actions/checkout@v3
+      with:
+        cache: 'npm' 
     - run: ls -la
-    
+      env:
+        SNYK_TOKEN: ${{secrets.f65d7696-efde-43df-ac91-c90571718412}}        
